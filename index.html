@@ -35,6 +35,9 @@
 
 <body ng-app="CudaNewsApp" ng-controller="CudaNewsController">
     <div class="container">
+        <a href="http://barracuda.com">
+        <img src="https://www.barracuda.com/assets/img/layout/logo/logo_color.svg" alt="Barracuda logo" id="logo-color" width="100">
+        </a>
         <h1>CudaNews: Security News</h1>
         <div ng-show="loading">
             <h3>Loading...</h3>
@@ -43,9 +46,9 @@
             <thead>
                 <tr>
                     <th></th>
-                    <th width="50%">News Title</th>
-                    <th>Date</th>
-                    <th>Source</th>
+                    <th st-sort="title" width="50%">News Title</th>
+                    <th st-sort="publishedAt">Date</th>
+                    <th st-sort="source.name">Source</th>
                     <th>Action</th>
                 </tr>
                 <tr>
@@ -78,6 +81,9 @@
             </tfoot>
         </table>
     </div>
+
+    <div class="copyright"><div class="container"><small><a href="https://www.barracuda.com/company/contact">Contact Us</a>|</span><a href="https://www.barracuda.com/legal/terms">Website Terms &amp; Conditions</a>|<a href="https://www.barracuda.com/company/careers">Careers</a><span class="hidden-sm-down">|</span><em>© 2003 - 2018 Barracuda Networks, Inc. All rights reserved.</em></small></div></div>
+
 </body>
 
 </html>
