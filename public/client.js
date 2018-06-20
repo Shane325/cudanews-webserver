@@ -1,3 +1,6 @@
+/**
+ * Define the CudaNewsApp module
+ */
 CudaNewsApp = angular.module('CudaNewsApp', ['CudaNewsApp.controllers', 'smart-table'])
 
 angular.module('CudaNewsApp.controllers', []).controller('CudaNewsController', ['$scope', '$http', function ($scope, $http) {

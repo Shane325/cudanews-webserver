@@ -1,6 +1,13 @@
-var express = require("express");
-var app     = express();
-var path    = require("path");
+'use strict'
+
+/**
+ * Module dependencies
+ */
+let express = require("express");
+let app     = express();
+let path    = require("path");
+
+let port = process.env.port || 8000
 
 app.use(express.static(__dirname + '/public'));
 
@@ -8,6 +15,6 @@ app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-console.log("Running at Port 8000");
-app.listen(8000);
+app.listen(port);
+console.log('App listening on port ', port)
 
