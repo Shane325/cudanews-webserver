@@ -1,7 +1,7 @@
 /**
  * Define the CudaNewsApp module
  */
-CudaNewsApp = angular.module('CudaNewsApp', ['CudaNewsApp.controllers', 'smart-table'])
+CudaNewsApp = angular.module('CudaNewsApp', ['CudaNewsApp.controllers', 'smart-table', '720kb.socialshare'])
 
 angular.module('CudaNewsApp.controllers', []).controller('CudaNewsController', ['$scope', '$http', function ($scope, $http) {
   $scope.loading = false

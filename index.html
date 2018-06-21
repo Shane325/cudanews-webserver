@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.8/smart-table.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="/client.js"></script>
 
@@ -34,6 +35,8 @@
 </head>
 
 <body ng-app="CudaNewsApp" ng-controller="CudaNewsController">
+    <script src="angular-socialshare.js"></script>
+
     <div class="container">
         <a href="http://barracuda.com">
         <img src="https://www.barracuda.com/assets/img/layout/logo/logo_color.svg" alt="Barracuda logo" id="logo-color" width="100">
@@ -66,9 +69,31 @@
                     <td>{{row.publishedAt | date}}</td>
                     <td>{{row.source.name}}</td>
                     <td>
-                      <a ng-href="{{ row.url }}" target="_blank" type="button" class="btn btn-sm btn-info">
-							<i class="glyphicon glyphicon-eye-open"></i>
-						</a>
+                        <a ng-href="{{ row.url }}" target="_blank" type="button" class="btn btn-sm btn-info">
+							              <i class="glyphicon glyphicon-eye-open"></i>
+						            </a>
+                        <button class="btn btn-medium"
+                                socialshare
+                                socialshare-provider="reddit"
+                                socialshare-text="{{row.source.name}}"
+                                socialshare-url="{{row.url}}"
+                                socialshare-popup-height="300"
+                                socialshare-popup-width="400"
+                                socialshare-trigger="click" >
+                                <i class="fa fa-reddit"></i>
+                        </button>
+                        <button class="btn btn-medium font-bold"
+                                socialshare
+                                socialshare-provider="twitter"
+                                socialshare-hashtags="security, hacked, exploits, malware, spam"
+                                socialshare-via="cudanews"
+                                socialshare-text="{{row.title}}"
+                                socialshare-url="{{row.url}}"
+                                socialshare-popup-height="300"
+                                socialshare-popup-width="400"
+                                socialshare-trigger="click" >
+                                <i class="fa fa-twitter"></i>
+                        </button>
                     </td>
                 </tr>
             </tbody>
