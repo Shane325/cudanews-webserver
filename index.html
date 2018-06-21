@@ -13,7 +13,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
@@ -26,9 +25,41 @@
         }
 
         body {
-            font-family: open-sans;
+            font-family: Lato, sans-serif;
+            font-weight: 200;
             font-size: 12px;
+            position: relative;
+            color: #000000;
+            overflow: visible;
+            overflow-x: hidden;
+            background: #F8F7F7;
         }
+
+        #title {
+            font-size: 32px;
+            clear: both;
+            color: #666;
+            margin: 0 auto 10px auto;
+            width: 850px;
+            padding: 5px 0;
+            text-align: left;
+            background: #F8F7F7;
+            border-top: 1px solid #F2F2F2;
+            border-bottom: 1px solid #F2F2F2;
+        }
+
+        .copyright {
+            font-size: 10px;
+            clear: both;
+            color: #666;
+            margin: 0 auto 10px auto;
+            width: 850px;
+            padding: 5px 0;
+            text-align: center;
+            background: #F8F7F7;
+            border-top: 1px solid #F2F2F2;
+        }
+
     </style>
 </head>
 
@@ -37,7 +68,7 @@
         <a href="http://barracuda.com">
         <img src="https://www.barracuda.com/assets/img/layout/logo/logo_color.svg" alt="Barracuda logo" id="logo-color" width="100">
         </a>
-        <h1>CudaNews: Security News</h1>
+        <h1 id="title">CudaNews: Security News</h1>
         <div ng-show="loading">
             <h3>Loading...</h3>
         </div>
