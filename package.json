@@ -1,15 +1,15 @@
 {
-  "name": "cudanews-aggregator",
+  "name": "cudanews-webserver",
   "version": "1.0.0",
-  "description": "Article aggregator for cudanews application",
-  "main": "server.js",
+  "description": "Article web server for cudanews application",
+  "main": "bootstrap.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bootstrap.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shane325/cudanews-aggregator.git"
+    "url": "git+https://github.com/Shane325/cudanews-webserver.git"
   },
   "keywords": [
     "barracuda",
@@ -21,12 +21,11 @@
   "author": "Shane Barry and Quang Ngo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Shane325/cudanews-aggregator/issues"
+    "url": "https://github.com/Shane325/cudanews-webserver/issues"
   },
-  "homepage": "https://github.com/Shane325/cudanews-aggregator#readme",
+  "homepage": "https://github.com/Shane325/cudanews-webserver#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "4.16.3",
-    "angular-socialshare": "^2.3.11"
+    "express": "4.16.3"
   }
 }
